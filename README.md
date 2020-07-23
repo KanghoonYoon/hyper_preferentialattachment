@@ -6,3 +6,35 @@ We proposed **Preferential Attachment on hypergraph with constraint** to predict
 Hypergraph
 -------------
 ![Hypergraph](./image/hyper.PNG)
+
+Hyper PA have more expressivity of graph structure.
+For simple graph, Publication 3 information vanishs.
+
+Hyper PA
+-------------
+![HyperPA](./image/hyperpa.png)
+
+The update(evolution) scheme of co-authorship network.
+
+
+Node Feature Extraction and Prediction
+------------
+
+We use the following features
+
+	- max(Degree) - min(Degree)  (in hyperedge)
+
+	- Averaged Degree (in hyperedge)
+
+	- max(closeness) (in hyperedge)
+
+	- Cluster coefficient
+
+	- Averaged Jaccard similarity (all possible pairs in hyperedge)
+
+	- Adamic Adar index
+
+
+By passigng the input to MLP model, we get the probability that authors in same hyperedge co-work.
+
+	
